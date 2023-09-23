@@ -345,6 +345,7 @@ pub const Wave = extern struct {
 
 pub const rAudioBuffer = opaque {};
 pub const rAudioProcessor = opaque {};
+pub const AudioCallback = *const fn (ptr: *anyopaque, frames: i32) void;
 
 pub const AudioStream = extern struct {
     buffer: ?*rAudioBuffer,
